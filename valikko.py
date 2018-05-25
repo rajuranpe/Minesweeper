@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-    
-#Author Rami Ilo, 2014
+#2014
 #Suorita tämä tiedosto käynnistääksesi peli/tilastot.
  
 import miinantallaaja

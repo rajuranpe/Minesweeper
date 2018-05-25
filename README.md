@@ -1,2 +1,2 @@
 # Miinaharava
-Minesweeper game I created in 2014
+A Minesweeper game I created in 2014.

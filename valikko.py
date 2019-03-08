@@ -20,7 +20,7 @@ while True:
         else:
             lue = tiedosto.read()
             tiedosto.close()
-            print "Tilastot: \n\n" + lue
+            print "Statistics: \n\n" + lue
             syote = raw_input("Input w to wipe out the statistics or anything else to go back.")
             if syote == "w":
                 tyhjennys = open("tilastot.txt", "w")

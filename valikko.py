@@ -7,7 +7,7 @@ while True:
     print "\n Miinaharava Deluxe edition \n Choose, what you wish to do \n p - play \n s - view statistics \n q - quit"
     valikkosyote = raw_input("").lower()
     if valikkosyote == "p":
-        """Aloittaa pelin."""
+        """Begins the game."""
         miinantallaaja.pelaa_pelia()
         continue
     if valikkosyote == "s":

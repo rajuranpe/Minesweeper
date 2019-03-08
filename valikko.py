@@ -1,40 +1,39 @@
 #-*- coding: utf-8 -*-    
-#2014
-#Suorita tämä tiedosto käynnistääksesi peli/tilastot.
+# Run this file to play or view the statistics.
  
 import miinantallaaja
  
 while True:
-    print "\n Miinaharava Deluxe edition \n valitse mitä haluat tehdä \n p - pelaa Miinaharava Deluxe editionia \n t - katsele tilastoja \n l - lopeta pelaaminen"
+    print "\n Miinaharava Deluxe edition \n Choose, what you wish to do \n p - play \n s - view statistics \n q - quit"
     valikkosyote = raw_input("").lower()
     if valikkosyote == "p":
         """Aloittaa pelin."""
         miinantallaaja.pelaa_pelia()
         continue
-    if valikkosyote == "t":
-        """Näyttää tilastot jos niitä on, mahdollisuus tyhjentää tilastot."""
+    if valikkosyote == "s":
+        """Shows statistics, if any, or empties them."""
         try:
             tiedosto = open("tilastot.txt", "r")
         except IOError:
-            print "Ei tilastoja :(. Pelaa ensin!"
+            print "No statistics :(. Play the game first!"
             continue
         else:
             lue = tiedosto.read()
             tiedosto.close()
             print "Tilastot: \n\n" + lue
-            syote = raw_input("Syötä t tyhjentääksesi pelihistoria tai mitä tahansa muuta poistuaksesi päävalikkoon.")
-            if syote == "t":
+            syote = raw_input("Input w to wipe out the statistics or anything else to go back.")
+            if syote == "w":
                 tyhjennys = open("tilastot.txt", "w")
                 tyhjennys.write("")
                 tyhjennys.close()
-                print "Pelihistoria tyhjennetty."
+                print "Statistics cleared."
                 continue
             else:
                 continue
-    if valikkosyote == "l":
-        """Lopettaa pelin."""
-        print "Kiitos pelaamisesta, tervetuloa takaisin!"
+    if valikkosyote == "q":
+        """Ends the game."""
+        print "Thank you for playing!"
         break
     else:
-        print "Nyt et kyllä ilmaissut kovin selkeästi mitä haluat tehdä, luepa uudestaan miten voit suorittaa minkäkin toiminnon."
+        print "Input not recognized! Please read the prompt message again."
         continue

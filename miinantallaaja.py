@@ -20,13 +20,13 @@ def kysy_kentan_muoto():
                 korkeus = int(korkeus)
                 miinamaara = int(miinamaara) + 1
             except ValueError:
-                print "Koitapas uusiksi, muodossa LEVEYS,KORKEUS,MIINAMÄÄRÄ ja ne on ihan kokonaislukuja, leveys ja korkeus keskenään samat."
+                print "Syötä initialisoitavan kartan parametrit muodossa LEVEYS,KORKEUS,MIINAMÄÄRÄ kokonaislukuina, leveys ja korkeus keskenään samat."
                 continue
             else:
                 if 3 <= leveys <= 20 and 3 <= korkeus <= 20 and miinamaara < korkeus * leveys and leveys == korkeus:
                     return leveys, korkeus, miinamaara
                 else:
-                    print "Laitas nyt järkevämmän kokoinen kartta, leveys ja korkeus samoiksi ja miinoja niin että ne mahtuvat siihen."
+                    print "Aseta kartan kooksi 3-20, leveys ja korkeus keskenään samoiksi (eli neliönmallinen kartta) ja miinoja niin, että ne mahtuvat siihen."
                     continue  
  
 def luo_kentta(leveys, korkeus, koordinaatit, miinamaara):
